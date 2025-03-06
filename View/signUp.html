@@ -25,15 +25,15 @@
         height: 50%;
         width: 50%;
 
-        .signInForm {
+        .signUpForm {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 15px;
+          gap: 10px;
 
           h1 {
             text-align: center;
-            font-size: 2rem;
+            font-size: 3rem;
           }
           input {
             font-size: var(--font-size);
@@ -55,9 +55,13 @@
             background-color: rgb(82, 82, 82);
             color: white;
           }
-          div {
+          .sign {
             margin-top: 20px;
             align-self: center;
+          }
+          .name {
+            display: flex;
+            gap: 10px;
           }
         }
       }
@@ -65,23 +69,21 @@
   </head>
   <body>
     <main>
-      <div class="signInForm">
+      <div class="signUpForm">
         <h1>SIGN UP</h1>
-        <input type="text" placeholder="username" />
-        <input type="password" placeholder="password" />
-        <button id="button">Sign In</button>
-        <div>
-          <span>Don't Have account </span> <a href="signUp.html">sign up</a>
+        <input type="text" placeholder="Username" />
+        <div class="name">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+        </div>
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm password" />
+        <button>Sign up</button>
+        <div class="sign">
+          <span>Already have an account? </span>
+          <a href="/">sign in</a>
         </div>
       </div>
     </main>
   </body>
-
-  <script>
-    const button = document.getElementById("button");
-
-    button.addEventListener("click", () => {
-      window.location.href = "mainPage.html";
-    });
-  </script>
 </html>
