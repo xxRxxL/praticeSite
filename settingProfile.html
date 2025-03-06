@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      height: 100vh;
+    }
+
+    aside {
+      padding: 10px;
+      border-right: 1px solid rgba(133, 133, 133, 0.377);
+      grid-column: 1/2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        padding: 10px;
+        color: black;
+        font-size: 1.4em;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.5s ease;
+      }
+      a:hover {
+        border-radius: 12px;
+        height: 30px;
+        background-color: rgb(182, 182, 182);
+      }
+      button {
+        height: 30px;
+        border-radius: 7px;
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bolder;
+      }
+    }
+
+    .profile {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: auto;
+      img {
+        height: 40px;
+      }
+    }
+
+    .settingContainer {
+      padding: 20px;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+      }
+    }
+
+    .image-name {
+      display: flex;
+      flex-direction: row;
+      align-items: end;
+      gap: 20px;
+      h1 {
+        font-size: 40px;
+      }
+    }
+    .userDetails {
+      font-size: 21px;
+      background: #dbdbdb73;
+      padding: 10px;
+      .username::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "USER NAME: ";
+      }
+      .fullName::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "FULL NAME: ";
+      }
+      .Email::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "EMAIL: ";
+      }
+      .oldPassword::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "OLD PASSWORD: ";
+      }
+      .newPassword::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "NEW PASSWORD: ";
+      }
+      /* ABOUT ME SIDE */
+
+      .educ::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "EDUCATION: ";
+      }
+      .address::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "FULL ADDRESS: ";
+      }
+      .phoneNumber::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "PHONE NUMBER: ";
+      }
+      .relship::before {
+        color: rgba(53, 53, 53, 0.774);
+        content: "RELATIONSHIP STATUS: ";
+      }
+    }
+
+    .about {
+      color: rgba(15, 15, 15, 0.945);
+    }
+  </style>
+  <body>
+    <aside>
+      <a href="mainPage.html">Home </a>
+      <a href="settingProfile.html">Profile</a>
+      <div class="profile">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
+          alt=""
+        />
+        <p>Israel wembyama</p>
+      </div>
+      <button id="logOut">Log out</button>
+    </aside>
+    <main class="settingContainer">
+      <div class="image-name">
+        <img
+          src="https://media.istockphoto.com/id/1961053928/photo/testimonial-portrait-of-a-handsome-mature-man.webp?a=1&b=1&s=612x612&w=0&k=20&c=F0JdjYpSfQi-ZY4fek-xnkl9AB3Ztaa8QlXwPZAovTc="
+          alt=""
+        />
+        <h1>CARDO DALISAY</h1>
+      </div>
+      <hr />
+      <div class="userDetails">
+        <h6 class="username">CARDO</h6>
+        <h6 class="fullName">CARDO DALISAY</h6>
+        <h6 class="Email">CARDODALISAY@GMAIL.COM</h6>
+        <h6 class="oldPassword">***************</h6>
+        <h6 class="newPassword">**************</h6>
+        <h1 class="about">ABOUT ME</h1>
+        <h6 class="educ">PROGGRAMMER</h6>
+        <h6 class="address">TONDO GAMING</h6>
+        <h6 class="phoneNumber">-0123100-12312-212</h6>
+        <h6 class="relship">SAPMU ASAWA</h6>
+      </div>
+    </main>
+  </body>
+  <script>
+    const name = "name";
+    const logOut = document.getElementById("logOut");
+    logOut.addEventListener("click", () => {
+      window.location.href = "signIn.html";
+    });
+  </script>
+</html>
